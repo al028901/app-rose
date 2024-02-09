@@ -1,0 +1,62 @@
+Para lanzar el servidor de websocket y poder leer y escribir en los topics
+roslaunch rosbridge_server rosbridge_websocket.launch
+
+
+tutorial : https://msadowski.github.io/ros-web-tutorial-pt1/
+
+https://codesandbox.io/p/sandbox/joystick-ppr6j?file=%2Fsrc%2Findex.js
+
+https://yoannmoi.net/nipplejs/
+
+---------------------actualizar depenencias--------------------------
+https://ed.team/blog/evita-errores-actualizando-tus-dependencias-de-npm
+
+Solución: actualizar la versión de tus dependencias
+Es tan sencillo como editar el archivo package.json y escribir las versiones actualizadas de cada dependencia. Obviamente, es muy tedioso y te va a tomar mucho tiempo. Así que mejor, abre la terminal y escribe:
+
+npm i -g npm-check-updates
+Con eso instalarás globalmente el paquete npm-check-updates que leerá tu archivo package.json comparará las versiones con los repositorios de npm y te indicará qué paquetes deben ser actualizados. Una vez instalado, puedes hacer lo siguiente:
+
+npm-check-updates -u
+O en su versión corta
+
+ncu -u
+
+Lo que actualizará las versiones de las dependencias en tu archivo package.jsoncuta
+
+----------------------------------------
+
+ros react libreria que lo encapsula todo
+
+https://github.com/ltiseni94/rosreact
+
+
+------------preparar demo-------------
+
+1.- lanzar rosbridge_server
+roslaunch rosbridge_server rosbridge_websocket.launch
+
+2.- lanzamos demo turtlsim
+rosrun turtlesim turtlesim_node
+
+y nos carga los siguientes nodos
+/client_count
+/connected_clients
+/rosout
+/rosout_agg
+/turtle1/cmd_vel
+/turtle1/color_sensor
+/turtle1/pose
+
+para ver que les llega rostopic echo /turtle1/cmd_vel
+
+
+Mandamos la velocidad en cada eje
+linear: 
+  x: 0.5474802756469982
+  y: -0.8368185871367146
+  z: 0.0
+angular: 
+  x: 0.0
+  y: 0.0
+  z: 5.291739165979668

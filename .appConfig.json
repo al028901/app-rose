@@ -1,0 +1,68 @@
+{
+  "type": "react",
+  "location": "/*/",
+  "id": "app-rose",
+  "domElementId": "root",
+  "mode": "demo",
+  "containerService": {},
+  "httpService": {
+    "app": {
+      "id": "app-rose",
+      "endpoint": "",
+      "port": 3000,
+      "headers": {}
+    }
+ 
+  },
+  "routerService": {
+    "entryPoints": [
+      {
+        "alias": ["AppRose"],
+        "url": "/AppRose"
+      }
+    ],
+    "paths": {
+      "internal": [
+        {
+          "path": "/",
+          "description": "Home"
+        },
+        {
+          "path": "/SettingsPage",
+          "description": "page of SEttings"
+        }
+       
+     
+       
+      ],
+      "external": [
+        {
+          "alias": "GettingStarted",
+          "path": [
+            {
+              "type": "CO",
+              "parameters": {
+                "resolutorType": "DIRECT_LINK",
+                "resolutorPath": "https://wwww"
+              }
+            }
+          ]
+        },
+        {
+          "alias": "React",
+          "path": [
+            {
+              "type": "CO",
+              "parameters": {
+                "resolutorType": "DIRECT_LINK",
+                "resolutorPath": "https://reactjs.org"
+              }
+            }
+          ]
+        }
+  
+      ]
+    }
+  }
+
+}

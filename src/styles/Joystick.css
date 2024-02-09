@@ -1,0 +1,56 @@
+/* Joystick.css */
+
+.joystick {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: #1c288d;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    touch-action: none;
+  }
+  
+  .joystick-handle {
+    width: 30px;
+    height: 30px;
+    background-color: #3498db;
+    border-radius: 50%;
+    transition: transform 0.1s ease-in-out;
+  }
+  
+  /******segundo ejemplo *****/
+  joy3Div{
+    width:200px;height:200px;margin:50px;
+  }
+
+  /*********/
+  #point{
+    position: relative;
+    border-radius: 50%;
+    opacity: 0.85;
+    border: 1px solid #000;
+    height: 50px;
+    width: 50px;
+    background-color: aqua;
+    z-index:1;
+  }
+  .nipple {
+    border: 1px solid #000;
+  }
+  .nipple collection_0{
+    background-color: rgb(0, 8, 255);
+  }
+  .nipple collection_0{
+    opacity: 0.5;
+    z-index: 999;
+    transition: opacity 250ms ease 0s;
+    left: 50px;
+    top: 150px;
+    display: block;
+    position: fixed;
+
+  }
