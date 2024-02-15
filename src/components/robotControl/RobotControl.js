@@ -1,33 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import { Container, Row, Col, Card } from "react-bootstrap";
-import PointCloudViewer from "../visualComponents/Three";
+//import PointCloudViewer from "../visualComponents/Three";
+import Arm3D from "../Ros/Arm3D";
+import RobotArmSimulation from "../robot/RobotArmSimulation";
 
 const RobotControl = () => {
-  const [setConfigData] = useState(null);
-  async function fetchMyDocument() {
-    try {
-      let response = await fetch("../../../src/indexRobot.html"); // Gets a promise
-      document.body.innerHTML = await response.text(); // Replaces body with response
-    } catch (err) {
-      console.log("Fetch error:" + err); // Error handling
-    }
-  }
-  useEffect(() => {
-    const loadConfigFile = async () => {
-      try {
-        const response = await fetch(indexRobot);
-        const data = await response.json();
-        setConfigData(data);
-      } catch (error) {
-        console.error("Error loading config file:", error);
-      }
-    };
-
-    loadConfigFile();
-    fetchMyDocument();
-  }, []); // Se ejecuta solo una vez al montar el componente
-
   return (
     <div>
       <Container>
@@ -38,12 +16,26 @@ const RobotControl = () => {
               <Card.Body>
                 <Card.Header>Camera </Card.Header>
                 <Card.Title>Robot Control</Card.Title>
-                <Card.Text></Card.Text>
+                <Card.Text>
+                  <RobotArmSimulation />{" "}
+                </Card.Text>
                 <Card.Footer>Camera Footer</Card.Footer>
               </Card.Body>
             </Card>
           </Col>
           <Col sm={6} md={6}>
+            <Card>
+              <Card.Body>
+                <Card.Header>Camera </Card.Header>
+                <Card.Title>Robot Control</Card.Title>
+                <Card.Text>
+                  <Arm3D />{" "}
+                </Card.Text>
+                <Card.Footer>Camera Footer</Card.Footer>
+              </Card.Body>
+            </Card>
+          </Col>
+          {/*       <Col sm={6} md={6}>
             <Card>
               <Card.Body>
                 <Card.Header>pointCloud </Card.Header>
@@ -56,7 +48,7 @@ const RobotControl = () => {
                 <Card.Footer>pointCloud Footer </Card.Footer>
               </Card.Body>
             </Card>
-          </Col>
+          </Col> */}
           <Col sm={6} md={6}></Col>
         </Row>
       </Container>
