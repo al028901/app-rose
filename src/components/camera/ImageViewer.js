@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-
-const ImageViewer = ({ imageUrl }) => {
+import PropTypes from "prop-types";
+const ImageViewer = (props) => {
   const [size, setSize] = useState({ width: "50%", height: "50%" });
 
   const handleMouseDown = (e) => {
@@ -29,7 +29,7 @@ const ImageViewer = ({ imageUrl }) => {
   return (
     <div>
       <img
-        src={imageUrl}
+        src={props.imageUrl}
         alt="Resizable"
         style={{ width: size.width, height: size.height }}
         onMouseDown={handleMouseDown}
@@ -39,3 +39,6 @@ const ImageViewer = ({ imageUrl }) => {
 };
 
 export default ImageViewer;
+ImageViewer.propTypes = {
+  imageUrl: PropTypes.string,
+};

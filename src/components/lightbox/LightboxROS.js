@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ROSList from "../Ros/ROSList";
 import { useMyContext } from "../../common/context/appContext/appContext";
 import SwitchComponent from "../switchComponent/SwitchComponent";
-const LightboxROS = ({ imageUrl }) => {
+const LightboxROS = () => {
   const { setRosConnected, setDemo, rosConnected, demo, webSocketIP } =
     useMyContext();
   const [isOpen, setIsOpen] = useState(false);

@@ -4,7 +4,7 @@ import Nipple from "../../components/joystick/Nipple";
 import { useMyContext } from "../../common/context/appContext/appContext";
 import ImageViewer from "../../components/camera/ImageViewer";
 import ROSLIB from "roslib";
-
+import RobotArmPeacetolero from "../../components/robot/RobotArmPeacetolero";
 const DrivePage = () => {
   const { webSocketIP, demo, rosInstance } = useMyContext();
   const [imageSrc, setImageSrc] = useState("");
@@ -88,7 +88,6 @@ const DrivePage = () => {
             </div>
             {demo ? (
               <img
-                float="left"
                 style={{ width: `${width}px`, height: `${height}px` }}
                 src={loading}
                 alt="Descripción de la imagen"
@@ -99,7 +98,7 @@ const DrivePage = () => {
           </div>
         </div>
       </div>
-
+      <RobotArmPeacetolero />
       <Nipple
         cmdVelPublisher={cmdVelPublisher}
         id={"direction"}

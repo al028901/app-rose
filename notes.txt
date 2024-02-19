@@ -60,3 +60,8 @@ angular:
   x: 0.0
   y: 0.0
   z: 5.291739165979668
+
+  --------------------------------
+
+  renderizar
+  https://hackernoon.com/es/c%C3%B3mo-renderizar-modelo-3d-en-una-aplicaci%C3%B3n-react-js
